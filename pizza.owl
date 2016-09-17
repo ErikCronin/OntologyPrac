@@ -46,6 +46,9 @@
         <Class IRI="#JalapenoPepperTopping"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#MargheritaPizza"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#MeatTopping"/>
     </Declaration>
     <Declaration>
@@ -53,6 +56,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#MushroomTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NamedPizza"/>
     </Declaration>
     <Declaration>
         <Class IRI="#OliveTopping"/>
@@ -152,6 +158,17 @@
         <Class IRI="#PepperTopping"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#MargheritaPizza"/>
+        <Class IRI="#NamedPizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MargheritaPizza"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasTopping"/>
+            <Class IRI="#MozzarellaTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#MeatTopping"/>
         <Class IRI="#PizzaTopping"/>
     </SubClassOf>
@@ -162,6 +179,10 @@
     <SubClassOf>
         <Class IRI="#MushroomTopping"/>
         <Class IRI="#VegetableTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NamedPizza"/>
+        <Class IRI="#Pizza"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#OliveTopping"/>
@@ -182,6 +203,17 @@
     <SubClassOf>
         <Class IRI="#PepperoniTopping"/>
         <Class IRI="#MeatTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pizza"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pizza"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBase"/>
+            <Class IRI="#PizzaBase"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#PrawnTopping"/>
@@ -331,6 +363,11 @@
         <ObjectProperty IRI="#isToppingOf"/>
         <Class IRI="#Pizza"/>
     </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MargheritaPizza</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A pizza that only has Mozarella and Tomato toppings.</Literal>
+    </AnnotationAssertion>
 </Ontology>
 
 
